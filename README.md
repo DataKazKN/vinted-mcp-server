@@ -3,9 +3,11 @@
 [![npm version](https://img.shields.io/npm/v/vinted-mcp-server.svg)](https://www.npmjs.com/package/vinted-mcp-server)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**The first MCP server for the Vinted marketplace.** Give your AI assistant the power to search 800M+ listings, compare prices across 19 countries, and analyze seller profiles — all through the [Model Context Protocol](https://modelcontextprotocol.io).
+**The first MCP server for the Vinted marketplace.**
 
-Works with **Claude Desktop**, **Cursor**, **Windsurf**, **Cline**, and any MCP-compatible client.
+Give your AI assistant reliable access to Vinted listings, seller profiles, cross-country price comparison, and trend discovery across 19 countries without building and maintaining your own Vinted integration.
+
+This server is ideal for Claude Desktop, Cursor, Windsurf, Cline, and any MCP-compatible client that needs structured Vinted data for shopping, sourcing, resale research, or marketplace intelligence workflows.
 
 ---
 
@@ -41,6 +43,14 @@ Then add to your MCP client config:
   }
 }
 ```
+
+## Why This Exists
+
+Vinted is a valuable marketplace for sourcing, price analysis, and resale research, but building a reliable integration is painful.
+
+Most DIY approaches break because of anti-bot protection, unstable scraping methods, or the complexity of supporting multiple countries consistently.
+
+This MCP server gives your AI tools a clean way to search, compare, and analyze Vinted data without rebuilding the same fragile infrastructure from scratch.
 
 ---
 
@@ -164,6 +174,29 @@ Returns the full list of 19 supported Vinted countries with domain, currency, an
 
 Returns the Vinted category tree for filtering searches.
 
+## What Your AI Agent Can Do With This
+
+With this MCP server, your AI assistant can:
+
+- find underpriced listings in specific countries
+- compare prices for the same query across Europe
+- analyze seller reputation and inventory
+- discover trending products and categories
+- support sourcing, shopping, arbitrage, and resale workflows
+- act as a Vinted research layer inside larger agent systems
+
+---
+
+## Who This Is For
+
+This MCP server is built for:
+
+- AI builders creating shopping or sourcing assistants
+- resale operators who want faster market intelligence
+- developers building marketplace copilots
+- researchers analyzing listings, prices, sellers, and trends
+- teams who want Vinted data inside Claude, Cursor, or MCP-compatible tools
+
 ---
 
 ## 🌍 Supported Countries (19)
@@ -202,9 +235,24 @@ Returns the Vinted category tree for filtering searches.
 
 ---
 
-## 🔗 Related
+## Run the Same Engine at Scale
 
-Looking for programmatic scraping at scale? Check out the **[Vinted Smart Scraper](https://apify.com/kazkn/vinted-smart-scraper)** on Apify — same engine, cloud-scale.
+This MCP server is powered by the same core engine used in the cloud version.
+
+If you need higher volume, direct cloud execution, scheduling, or production-scale runs, use the underlying actor on Apify:
+
+👉 [Vinted Smart Scraper on Apify](https://apify.com/kazkn/vinted-smart-scraper)
+
+If you want direct coding integrations instead of MCP, see the wrappers below.
+
+## Related Projects
+
+Programmatic wrappers:
+- [vinted-scraper-python](https://github.com/KinderCN/vinted-scraper-python)
+- [vinted-scraper-js](https://github.com/KinderCN/vinted-scraper-js)
+
+Cloud-scale engine:
+- [Vinted Smart Scraper on Apify](https://apify.com/kazkn/vinted-smart-scraper)
 
 ---
 
