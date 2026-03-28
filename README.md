@@ -5,7 +5,7 @@
 
 **The first MCP server for the Vinted marketplace.**
 
-Give your AI assistant reliable access to Vinted listings, seller profiles, cross-country price comparison, and trend discovery across 19 countries without building and maintaining your own Vinted integration.
+Give your AI assistant reliable access to Vinted listings, seller profiles, cross-country price comparison, and trend discovery across 26 Vinted markets without building and maintaining your own Vinted integration.
 
 This server is ideal for Claude Desktop, Cursor, Windsurf, Cline, and any MCP-compatible client that needs structured Vinted data for shopping, sourcing, resale research, or marketplace intelligence workflows.
 
@@ -168,7 +168,7 @@ Discover trending items on Vinted.
 
 ### `vinted://countries`
 
-Returns the full list of 19 supported Vinted countries with domain, currency, and language info.
+Returns the full list of 26 supported Vinted markets with domain, currency, and language info.
 
 ### `vinted://categories`
 
