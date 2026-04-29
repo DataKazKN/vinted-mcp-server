@@ -1,7 +1,7 @@
 {
   "name": "vinted-mcp-server",
   "version": "1.0.1",
-  "description": "MCP Server for Vinted marketplace — search items, compare prices, analyze sellers across 19 countries. Works with Claude Desktop, Cursor, and any MCP client.",
+  "description": "MCP Server for Vinted marketplace \u2014 search items, compare prices, analyze sellers across 19 countries. Works with Claude Desktop, Cursor, and any MCP client.",
   "main": "dist/bundle.js",
   "bin": {
     "vinted-mcp-server": "./dist/bundle.js"
@@ -39,5 +39,13 @@
   "files": [
     "dist/bundle.js",
     "README.md"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DataKazKN/vinted-mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DataKazKN/vinted-mcp-server/issues"
+  },
+  "homepage": "https://github.com/DataKazKN/vinted-mcp-server#readme"
 }
