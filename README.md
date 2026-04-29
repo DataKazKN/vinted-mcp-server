@@ -248,8 +248,8 @@ If you want direct coding integrations instead of MCP, see the wrappers below.
 ## Related Projects
 
 Programmatic wrappers:
-- [vinted-scraper-python](https://github.com/KinderCN/vinted-scraper-python)
-- [vinted-scraper-js](https://github.com/KinderCN/vinted-scraper-js)
+- [vinted-scraper-python](https://github.com/DataKazKN)
+- [vinted-scraper-js](https://github.com/DataKazKN)
 
 Cloud-scale engine:
 - [Vinted Smart Scraper on Apify](https://apify.com/kazkn/vinted-smart-scraper)
