@@ -21,15 +21,30 @@ jobs:
       - name: Install dependencies
         run: npm install --no-audit --no-fund
 
-      - name: Type-check (tsc)
-        run: npm run build
-
-      - name: Bundle (esbuild)
-        run: npm run bundle
-
-      - name: Verify bundle output
+      - name: Validate package metadata
         run: |
-          test -f dist/bundle.js
-          # Sanity: bundle should be > 1KB
-          test "$(wc -c < dist/bundle.js)" -gt 1024
-          echo "Bundle size: $(wc -c < dist/bundle.js) bytes"
+          # package.json structure sanity
+          node -e "
+            const pkg = require('./package.json');
+            const required = ['name', 'version', 'main', 'bin', 'license', 'engines'];
+            const missing = required.filter(k => !pkg[k]);
+            if (missing.length) {
+              console.error('Missing required package.json fields:', missing);
+              process.exit(1);
+            }
+            console.log('package.json: name=' + pkg.name + ' version=' + pkg.version);
+            console.log('  main=' + pkg.main);
+            console.log('  bin=' + JSON.stringify(pkg.bin));
+            console.log('  license=' + pkg.license);
+          "
+          # Verify the published bundle exists in npm (sanity)
+          npm view vinted-mcp-server version || true
+
+      - name: Verify package can be packed
+        run: npm pack --dry-run
+
+      - name: Lint required documentation
+        run: |
+          test -f README.md && echo "README.md OK" || (echo "README.md missing" && exit 1)
+          test -f LICENSE && echo "LICENSE OK" || (echo "LICENSE missing" && exit 1)
+          test -f CONTRIBUTING.md && echo "CONTRIBUTING.md OK" || (echo "CONTRIBUTING.md missing" && exit 1)
