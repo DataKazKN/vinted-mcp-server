@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type-check (tsc)
+        run: npm run build
+
+      - name: Bundle (esbuild)
+        run: npm run bundle
+
+      - name: Verify bundle output
+        run: |
+          test -f dist/bundle.js
+          # Sanity: bundle should be > 1KB
+          test "$(wc -c < dist/bundle.js)" -gt 1024
+          echo "Bundle size: $(wc -c < dist/bundle.js) bytes"

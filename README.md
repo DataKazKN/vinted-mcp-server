@@ -1,6 +1,9 @@
 # 🛍️ Vinted MCP Server — Search, Compare Prices & Analyze Sellers
 
+[![CI](https://github.com/DataKazKN/vinted-mcp-server/actions/workflows/ci.yml/badge.svg)](https://github.com/DataKazKN/vinted-mcp-server/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/vinted-mcp-server.svg)](https://www.npmjs.com/package/vinted-mcp-server)
+[![npm downloads](https://img.shields.io/npm/dm/vinted-mcp-server.svg)](https://www.npmjs.com/package/vinted-mcp-server)
+[![Node.js Version](https://img.shields.io/node/v/vinted-mcp-server.svg)](https://www.npmjs.com/package/vinted-mcp-server)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **The first MCP server for the Vinted marketplace.**
